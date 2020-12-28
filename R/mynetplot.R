@@ -8,9 +8,9 @@
 mynetplot <- function(df, width = NULL, height = NULL, elementId = NULL) {
 
   df2 <- df %>% mutate(genes = strsplit(genes, ",") )
-  df2$value = 10
+  df2$value = 3
   df2$color = "#ff0000"
-  aux <- tibble( path=unique(unlist(df2$genes)), genes = NA, value = 3, color="#0000ff" )
+  aux <- tibble( path=unique(unlist(df2$genes)), genes = NA, value = 1, color="#0000ff" )
   df3 <- rbind(df2,aux) %>% select(path,value,genes,color) %>% as.data.frame()
   names(df3) <- c("name","value","linkWith","color")
   dfjson <- jsonlite::toJSON(df3)

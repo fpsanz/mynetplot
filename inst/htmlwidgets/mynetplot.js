@@ -26,7 +26,7 @@ HTMLWidgets.widget({
         networkSeries.dataFields.color = "color";
 
         networkSeries.nodes.template.label.text = "{name}";
-        networkSeries.fontSize = 12;
+        networkSeries.fontSize = 8;
         networkSeries.linkWithStrength = 0;
 
         var nodeTemplate = networkSeries.nodes.template;
@@ -55,8 +55,8 @@ HTMLWidgets.widget({
             });
         });
 
-        networkSeries.manyBodyStrength = -50;
-        networkSeries.links.template.distance = 1;
+        networkSeries.manyBodyStrength = -10;
+        networkSeries.links.template.distance = 0.5;
         networkSeries.links.template.strength = 1;
 
         networkSeries.data = x.data;
